@@ -1,8 +1,9 @@
 import { Router } from "express";
 import { createUser, deleteUser, getAllUser, getUser, updateUser } from "../controllers/user_controller";
-import { addAppointement, deleteAppointement, getAllAppointements, getAppointement, updateAppointement } from "../controllers/booking_controller";
+import { addAppointment, deleteAppointment, getAllAppointments, getAppointment, updateAppointment } from "../controllers/booking_controller";
 import { addProfile, deleteProfile, getAllProfiles, getProfile, updateProfile } from "../controllers/healthp_controller";
 import { addReview, deleteReview, getAllReviews, getReview, updateReview } from "../controllers/reviews_controller";
+import { createHealthUser, deleteHealthUser, getAllHealthUsers, getHealthUser, updateHealthUser } from "../controllers/healthUser_controller";
 
 
 export const router = Router ();
@@ -14,11 +15,11 @@ router.patch('/create/:id', updateUser);
 router.delete('/create/:id', deleteUser);
 
 
-router.post('/appointement', addAppointement);
-router.get('/appointement', getAllAppointements);
-router.get('/appointement/:id', getAppointement);
-router.delete('/appointement/:id', deleteAppointement);
-router.patch('/appointement/:id', updateAppointement);
+router.post('/appointment', addAppointment);
+router.get('/appointment', getAllAppointments);
+router.get('/appointment/:id', getAppointment);
+router.delete('/appointment/:id', deleteAppointment);
+router.patch('/appointment/:id', updateAppointment);
 
 
 
@@ -36,3 +37,9 @@ router.delete('/review/:id', deleteReview);
 router.patch('/review/:id', updateReview);
 
 
+
+router.post('/healthprofessional', createHealthUser);
+router.get('/healthprofessional', getAllHealthUsers);
+router.get('/healthprofessional/:id', getHealthUser);
+router.patch('/healthprofessional/:id', updateHealthUser);
+router.delete('/healthprofessional/:id', deleteHealthUser);

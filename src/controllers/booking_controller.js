@@ -1,49 +1,49 @@
 import { appointementModel } from "../models/booking";
 
 
-export const addAppointement = async (req, res) =>{
+export const addAppointment = async (req, res) =>{
    try {
      const data = req.body
-     const addAppointement= await appointementModel.create(data)
-     res.json(addAppointement);
+     const addAppointment= await appointementModel.create(data)
+     res.json(addAppointment);
  } catch(error){
     console.log(error)
  }
 }
 
-export const getAllAppointements = async (req, res) =>{
+export const getAllAppointments = async (req, res) =>{
    try {
-     const getAllAppointements= await appointementModel.find({})
-     res.json(getAllAppointements);
- } catch(error){
-    console.log(error)
- }
-}
-
-
-export const getAppointement = async (req, res) =>{
-   try {
-     const getAppointement= await appointementModel.findById(req.params.id)
-     res.json(getAppointement);
+     const getAllAppointments= await appointementModel.find({})
+     res.json(getAllAppointments);
  } catch(error){
     console.log(error)
  }
 }
 
 
-export const updateAppointement = async (req, res) =>{
+export const getAppointment = async (req, res) =>{
    try {
-     const updateUser= await appointementModel.findByIdAndUpdate(req.params._id, req.body)
-     res.json(updateUser);
+     const getAppointment= await appointementModel.findById(req.params.id)
+     res.json(getAppointment);
  } catch(error){
     console.log(error)
  }
 }
 
-export const deleteAppointement = async (req, res) =>{
+
+export const updateAppointment = async (req, res) =>{
    try {
-     const deleteUser= await appointementModel.findByIdAndDelete(req.params.id)
-     res.json(deleteUser);
+     const updateAppointment= await appointementModel.findByIdAndUpdate(req.params._id, req.body)
+     res.json(updateAppointment);
+ } catch(error){
+    console.log(error)
+ }
+}
+
+export const deleteAppointment = async (req, res) =>{
+   try {
+     const deleteAppointment= await appointementModel.findByIdAndDelete(req.params.id)
+     res.json(deleteAppointment);
  } catch(error){
     console.log(error)
  }
