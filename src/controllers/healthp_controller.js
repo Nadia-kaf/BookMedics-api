@@ -1,4 +1,4 @@
-import { healthpModel } from "../models/healthp";
+import { healthpModel } from "../models/healthprofile.js";
 
 
 export const addProfile = async (req, res) =>{

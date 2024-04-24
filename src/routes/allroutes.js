@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { createUser, deleteUser, getAllUser, getUser, updateUser } from "../controllers/user_controller";
-import { addAppointment, deleteAppointment, getAllAppointments, getAppointment, updateAppointment } from "../controllers/booking_controller";
-import { addProfile, deleteProfile, getAllProfiles, getProfile, updateProfile } from "../controllers/healthp_controller";
-import { addReview, deleteReview, getAllReviews, getReview, updateReview } from "../controllers/reviews_controller";
-import { createHealthUser, deleteHealthUser, getAllHealthUsers, getHealthUser, updateHealthUser } from "../controllers/healthUser_controller";
+import { createUser, deleteUser, getAllUser, getUser, updateUser } from "../controllers/user_controller.js";
+import { addAppointment, deleteAppointment, getAllAppointments, getAppointment, updateAppointment } from "../controllers/booking_controller.js";
+import { addProfile, deleteProfile, getAllProfiles, getProfile, updateProfile } from "../controllers/healthp_controller.js";
+import { addReview, deleteReview, getAllReviews, getReview, updateReview } from "../controllers/reviews_controller.js";
+import { createHealthUser, deleteHealthUser, getAllHealthUsers, getHealthUser, updateHealthUser } from "../controllers/healthUser_controller.js";
 
 
 export const router = Router ();
@@ -43,3 +43,6 @@ router.get('/healthprofessional', getAllHealthUsers);
 router.get('/healthprofessional/:id', getHealthUser);
 router.patch('/healthprofessional/:id', updateHealthUser);
 router.delete('/healthprofessional/:id', deleteHealthUser);
+
+
+export default router;
