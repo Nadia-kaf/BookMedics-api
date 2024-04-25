@@ -33,7 +33,7 @@ export const getAppointment = async (req, res) =>{
 
 export const updateAppointment = async (req, res) =>{
    try {
-     const updateAppointment= await appointementModel.findByIdAndUpdate(req.params._id, req.body)
+     const updateAppointment= await appointementModel.findByIdAndUpdate(req.params.id, req.body)
      res.json(updateAppointment);
  } catch(error){
     console.log(error)

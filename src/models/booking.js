@@ -8,8 +8,9 @@ const appointementSchema = new schema({
    email:{type: String, required:true},
    phone:{type: String, required:true},
    service:{type: String, required:true},
-   doctor:{type: String, required:true},
+   healthprofessional:{type: String, required:true},
    date:{type: String, required:true},
+   time:{type: String, required:true},
    comment:{type: String}
 });
 
