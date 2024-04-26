@@ -1,18 +1,17 @@
 import { Router } from "express";
-import { createUser, deleteUser, getAllUser, getUser, updateUser } from "../controllers/user_controller.js";
+
 import { addAppointment, deleteAppointment, getAllAppointments, getAppointment, updateAppointment } from "../controllers/booking_controller.js";
 import { addProfile, deleteProfile, getAllProfiles, getProfile, updateProfile } from "../controllers/healthp_controller.js";
 import { addReview, deleteReview, getAllReviews, getReview, updateReview } from "../controllers/reviews_controller.js";
 import { createHealthUser, deleteHealthUser, getAllHealthUsers, getHealthUser, updateHealthUser } from "../controllers/healthUser_controller.js";
+import { loginUser, signupUser } from "../controllers/user_controller.js";
 
 
 export const router = Router ();
 
-router.post('/create', createUser);
-router.get('/create', getAllUser);
-router.get('/create/:id', getUser);
-router.patch('/create/:id', updateUser);
-router.delete('/create/:id', deleteUser);
+router.post('/user/signup', signupUser);
+router.get('/user/login', loginUser);
+
 
 
 router.post('/appointment', addAppointment);
