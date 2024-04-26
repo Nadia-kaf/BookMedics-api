@@ -33,7 +33,7 @@ export const getReview = async (req, res) =>{
 
 export const updateReview = async (req, res) =>{
    try {
-     const updateReview= await reviewModel.findByIdAndUpdate(req.params._id, req.body)
+     const updateReview= await reviewModel.findByIdAndUpdate(req.params.id, req.body)
      res.json(updateReview);
  } catch(error){
     console.log(error)
